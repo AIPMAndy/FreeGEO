@@ -4,7 +4,7 @@
 
 MIT · 浏览器本地优先 · 核心免费 · 无需注册或模型密钥 · 可选付费官方 API
 
-[快速上手](docs/QUICKSTART.md) · [深度研究](docs/RESEARCH.md) · [研究网页版](docs/research.html) · [v0.3 对抗式验收](docs/RELEASE_V03.md) · [真实业务试点](examples/pilots/README.md) · [GEO Handbook](https://github.com/AIPMAndy/geo-handbook) · [AI 酋长 Andy](https://metaver.vip/) · 微信 `AIPMAndy`
+[在线使用](https://aipmandy.github.io/FreeGEO/) · [快速上手](docs/QUICKSTART.md) · [深度研究](docs/RESEARCH.md) · [研究网页版](docs/research.html) · [v0.3 对抗式验收](docs/RELEASE_V03.md) · [真实业务试点](examples/pilots/README.md) · [GEO Handbook](https://github.com/AIPMAndy/geo-handbook) · [AI 酋长 Andy](https://metaver.vip/) · 微信 `AIPMAndy`
 
 ## 5 分钟获得下一步行动
 
