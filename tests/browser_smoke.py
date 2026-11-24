@@ -10,7 +10,8 @@ threading.Thread(target=server.serve_forever,daemon=True).start()
 base=f'http://127.0.0.1:{server.server_port}'
 with sync_playwright() as p:
     browser=p.chromium.launch(executable_path=os.environ.get('CHROMIUM'),args=['--no-sandbox'])
-    page=browser.new_page(viewport={'width':1280,'height':900},accept_downloads=True)
+    context=browser.new_context(viewport={'width':1280,'height':900},accept_downloads=True)
+    page=context.new_page()
     errors=[]; requests=[]
     page.on('pageerror',lambda error: errors.append(str(error)))
     page.on('request',lambda req: requests.append(req.url))
@@ -34,7 +35,7 @@ with sync_playwright() as p:
     # A stale tab must never overwrite a newer project library via full restore.
     key='freegeo-project-library-v1'
     old=page.evaluate('(k)=>localStorage.getItem(k)',key)
-    other=page.context.new_page()
+    other=context.new_page()
     other.goto(base+'/index.html')
     other.get_by_role('button',name='新建空白项目').click()
     latest=other.evaluate('(k)=>localStorage.getItem(k)',key)
@@ -58,7 +59,7 @@ with sync_playwright() as p:
     assert page.evaluate("getComputedStyle(document.documentElement).scrollBehavior")=='auto'
     assert page.locator('#copy-wechat').evaluate("(el)=>getComputedStyle(el).transitionDuration")=='0s'
     assert page.locator('link[rel=canonical]').get_attribute('href')=='https://aipmandy.github.io/FreeGEO/'
-    assert json.loads(page.locator('script[type="application/ld+json"]').inner_text())['@type']=='WebApplication'
+    assert json.loads(page.locator('script[type="application/ld+json"]').text_content())['@type']=='WebApplication'
     assert page.locator('a[href="https://www.a6no1.cn/"]').count()>=1
     assert page.locator('a[href="https://metaver.vip/services"]').count()==1
     page.goto(base+'/docs/research.html');assert page.locator('h1').count()==1;assert page.locator('table').count()>=8
