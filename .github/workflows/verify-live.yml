@@ -1,0 +1,38 @@
+name: Verify FreeGEO public Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify exact published bytes
+        run: |
+          python3 - <<'PY'
+          import hashlib,time,urllib.request
+          from pathlib import Path
+          base='https://aipmandy.github.io/FreeGEO/'
+          files=['index.html','app.js','style.css','core.js','growth.js','workflow.js','projects.js','sitemap.xml']
+          for attempt in range(15):
+              errors=[]
+              for name in files:
+                  try:
+                      url=base+('' if name=='index.html' else name)
+                      req=urllib.request.Request(url+'?release='+str(attempt),headers={'Cache-Control':'no-cache','User-Agent':'FreeGEO release verification'})
+                      with urllib.request.urlopen(req,timeout=12) as r:
+                          data=r.read()
+                          assert r.status==200
+                      assert data==Path(name).read_bytes(), 'byte mismatch'
+                      print(name,hashlib.sha256(data).hexdigest())
+                  except Exception as e:
+                      errors.append(name+': '+str(e))
+              if not errors: break
+              print('Not yet verified:',errors)
+              if attempt<14: time.sleep(15)
+          else: raise SystemExit('Public release verification failed')
+          PY

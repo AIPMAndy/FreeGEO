@@ -31,7 +31,36 @@ with sync_playwright() as p:
     exported=json.loads(Path(download.value.path()).read_text());assert len(exported['questions'])==len(exported['observations'])==1
     page.locator('#import').set_input_files(str(root/'examples/demo.json'));page.wait_for_function("document.querySelector('#project-name').textContent.includes('DEMO')")
     page.reload(); assert 'DEMO' in page.locator('#project-name').inner_text()
-    page.set_viewport_size({'width':390,'height':844});assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth')
+    # A stale tab must never overwrite a newer project library via full restore.
+    key='freegeo-project-library-v1'
+    old=page.evaluate('(k)=>localStorage.getItem(k)',key)
+    other=page.context.new_page()
+    other.goto(base+'/index.html')
+    other.get_by_role('button',name='新建空白项目').click()
+    latest=other.evaluate('(k)=>localStorage.getItem(k)',key)
+    assert latest!=old
+    page.locator('#import-all').set_input_files({'name':'old.json','mimeType':'application/json','buffer':old.encode()})
+    page.wait_for_function("document.querySelector('#notice').textContent.includes('其他页面已经更新')")
+    assert page.evaluate('(k)=>localStorage.getItem(k)',key)==latest
+    other.close()
+    page.reload()
+    tab=page.locator('#tabs [aria-selected=true]')
+    tab.focus(); page.keyboard.press('ArrowRight')
+    assert page.evaluate("document.activeElement.getAttribute('aria-selected')")== 'true'
+    assert page.locator('#tabs [tabindex="0"]').count()==1
+    assert page.locator('#panel').get_attribute('aria-labelledby')==page.locator('#tabs [aria-selected=true]').get_attribute('id')
+    page.keyboard.press('Home')
+    assert page.locator('#tabs [aria-selected=true]').get_attribute('id')==page.locator('#tabs [role=tab]').first.get_attribute('id')
+    for width in (360,390,1280):
+        page.set_viewport_size({'width':width,'height':844})
+        assert page.evaluate('document.documentElement.scrollWidth <= window.innerWidth'),width
+    page.emulate_media(reduced_motion='reduce')
+    assert page.evaluate("getComputedStyle(document.documentElement).scrollBehavior")=='auto'
+    assert page.locator('#copy-wechat').evaluate("(el)=>getComputedStyle(el).transitionDuration")=='0s'
+    assert page.locator('link[rel=canonical]').get_attribute('href')=='https://aipmandy.github.io/FreeGEO/'
+    assert json.loads(page.locator('script[type="application/ld+json"]').inner_text())['@type']=='WebApplication'
+    assert page.locator('a[href="https://www.a6no1.cn/"]').count()>=1
+    assert page.locator('a[href="https://metaver.vip/services"]').count()==1
     page.goto(base+'/docs/research.html');assert page.locator('h1').count()==1;assert page.locator('table').count()>=8
     assert not errors, errors
     browser.close()
