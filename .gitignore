@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+*.log
+workspace*.json
+
+.env
+*.raw.jsonl
+access.log
+*.local.json

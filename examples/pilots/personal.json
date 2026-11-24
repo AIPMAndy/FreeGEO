@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "name": "试点 A · 个人官网（真实页面，未采样）",
+  "demo": false,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "从其他岗位转 AI 产品经理需要怎样准备？",
+      "target": "https://metaver.vip/services",
+      "intent": "了解",
+      "audience": "AI 产品从业者、职场人和创业者",
+      "stage": "假设",
+      "evidence": "根据公开服务页面拟定；未核验真实客户原话，不可作为已验证需求。"
+    },
+    {
+      "id": "q2",
+      "prompt": "怎样判断 AI 求职陪跑是否适合我？",
+      "target": "https://metaver.vip/services",
+      "intent": "决策",
+      "audience": "AI 产品从业者、职场人和创业者",
+      "stage": "假设",
+      "evidence": "根据公开服务页面拟定；未核验真实客户原话，不可作为已验证需求。"
+    },
+    {
+      "id": "q3",
+      "prompt": "行业经验如何变成 AI 咨询副业？",
+      "target": "https://metaver.vip/services",
+      "intent": "执行",
+      "audience": "AI 产品从业者、职场人和创业者",
+      "stage": "假设",
+      "evidence": "根据公开服务页面拟定；未核验真实客户原话，不可作为已验证需求。"
+    },
+    {
+      "id": "q4",
+      "prompt": "个人 AI IP 如何建立可持续内容流程？",
+      "target": "https://metaver.vip/services",
+      "intent": "执行",
+      "audience": "AI 产品从业者、职场人和创业者",
+      "stage": "假设",
+      "evidence": "根据公开服务页面拟定；未核验真实客户原话，不可作为已验证需求。"
+    },
+    {
+      "id": "q5",
+      "prompt": "企业 AI 获客咨询怎么验收？",
+      "target": "https://metaver.vip/services",
+      "intent": "比较",
+      "audience": "AI 产品从业者、职场人和创业者",
+      "stage": "假设",
+      "evidence": "根据公开服务页面拟定；未核验真实客户原话，不可作为已验证需求。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "claim": "官网列出五类陪跑服务及其适用场景。",
+      "source": "https://metaver.vip/services",
+      "evidenceType": "自有",
+      "factStatus": "已核验",
+      "checked": "2026-11-24",
+      "notes": "仅核对2026-11-24公开官网明确自述；并非独立认证服务履约、业绩或资质。"
+    },
+    {
+      "id": "f2",
+      "claim": "官网提供个人 AI 分身、知识库、社群和咨询入口。",
+      "source": "https://metaver.vip/",
+      "evidenceType": "自有",
+      "factStatus": "已核验",
+      "checked": "2026-11-24",
+      "notes": "仅核对2026-11-24公开官网明确自述；并非独立认证服务履约、业绩或资质。"
+    },
+    {
+      "id": "f3",
+      "claim": "求职服务页说明有导师一对一及 Andy 集体课，且不承诺录用。",
+      "source": "https://metaver.vip/services",
+      "evidenceType": "自有",
+      "factStatus": "已核验",
+      "checked": "2026-11-24",
+      "notes": "仅核对2026-11-24公开官网明确自述；并非独立认证服务履约、业绩或资质。"
+    }
+  ],
+  "observations": [],
+  "experiments": [],
+  "events": [],
+  "profile": {
+    "brand": "AI 酋长 Andy",
+    "scope": "https://metaver.vip/",
+    "offer": "高管成长；求职；职场副业；个人 AI+IP；企业 AI+IP 获客",
+    "audience": "AI 产品从业者、职场人和创业者",
+    "goal": "咨询"
+  },
+  "workflow": {
+    "version": 1,
+    "panels": [],
+    "tasks": [
+      {
+        "id": "8699233b-9e59-4eb4-83f9-10eef73005b2",
+        "priority": "P0",
+        "title": "核对个人品牌公开事实口径",
+        "target": "https://metaver.vip/",
+        "evidence": "个人官网与公司官网关于 AI 产品经验的公开口径不同（8 年与十年以上，可能统计范围不同）；需核对定义、起止时间与事实依据。",
+        "action": "核对实际经历的时间线和计量范围；必要时同步修订官网与公司页，保留依据。",
+        "acceptance": "真实依据可核验，两个官网口径与统计范围清晰一致或能解释差异。",
+        "created": "2026-11-24",
+        "status": "待执行",
+        "execution": "",
+        "verification": "",
+        "verifiedBy": "",
+        "verifiedDate": ""
+      }
+    ],
+    "audits": [],
+    "competitors": []
+  }
+}

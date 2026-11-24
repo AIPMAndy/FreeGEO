@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "name": "试点 B · 星觉科技（真实页面，未采样）",
+  "demo": false,
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": "留学生回国想转 AI 岗位，求职辅导怎么选？",
+      "target": "https://www.a6no1.cn/services/career",
+      "intent": "决策",
+      "audience": "留学生、应届生、企业业务和营销负责人",
+      "stage": "假设",
+      "evidence": "根据公开服务页面拟定；未核验真实客户原话，不可作为已验证需求。"
+    },
+    {
+      "id": "q2",
+      "prompt": "求职陪跑应该交付哪些具体成果？",
+      "target": "https://www.a6no1.cn/services/career",
+      "intent": "比较",
+      "audience": "留学生、应届生、企业业务和营销负责人",
+      "stage": "假设",
+      "evidence": "根据公开服务页面拟定；未核验真实客户原话，不可作为已验证需求。"
+    },
+    {
+      "id": "q3",
+      "prompt": "企业如何搭建创始人 IP 获客体系？",
+      "target": "https://www.a6no1.cn/services/enterprise",
+      "intent": "执行",
+      "audience": "留学生、应届生、企业业务和营销负责人",
+      "stage": "假设",
+      "evidence": "根据公开服务页面拟定；未核验真实客户原话，不可作为已验证需求。"
+    },
+    {
+      "id": "q4",
+      "prompt": "企业内容矩阵如何跟踪线索质量？",
+      "target": "https://www.a6no1.cn/services/enterprise",
+      "intent": "执行",
+      "audience": "留学生、应届生、企业业务和营销负责人",
+      "stage": "假设",
+      "evidence": "根据公开服务页面拟定；未核验真实客户原话，不可作为已验证需求。"
+    },
+    {
+      "id": "q5",
+      "prompt": "企业 AI 获客咨询有哪些验收边界？",
+      "target": "https://www.a6no1.cn/services/enterprise",
+      "intent": "决策",
+      "audience": "留学生、应届生、企业业务和营销负责人",
+      "stage": "假设",
+      "evidence": "根据公开服务页面拟定；未核验真实客户原话，不可作为已验证需求。"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f1",
+      "claim": "求职服务页公开说明岗位定位、简历和项目表达、模拟面试和反馈等交付。",
+      "source": "https://www.a6no1.cn/services/career",
+      "evidenceType": "自有",
+      "factStatus": "已核验",
+      "checked": "2026-11-24",
+      "notes": "仅核对2026-11-24公开官网明确自述；并非独立认证服务履约、业绩或资质。"
+    },
+    {
+      "id": "f2",
+      "claim": "求职页公开列出 9 节导师一对一与 3 节 Andy 集体课，并说明不承诺 Offer。",
+      "source": "https://www.a6no1.cn/services/career",
+      "evidenceType": "自有",
+      "factStatus": "已核验",
+      "checked": "2026-11-24",
+      "notes": "仅核对2026-11-24公开官网明确自述；并非独立认证服务履约、业绩或资质。"
+    },
+    {
+      "id": "f3",
+      "claim": "企业服务页说明 IP 矩阵、AI 内容流程、线索跟进与复盘，且不保证固定流量或成交数。",
+      "source": "https://www.a6no1.cn/services/enterprise",
+      "evidenceType": "自有",
+      "factStatus": "已核验",
+      "checked": "2026-11-24",
+      "notes": "仅核对2026-11-24公开官网明确自述；并非独立认证服务履约、业绩或资质。"
+    }
+  ],
+  "observations": [],
+  "experiments": [],
+  "events": [],
+  "profile": {
+    "brand": "安迪星觉",
+    "scope": "https://www.a6no1.cn/",
+    "offer": "求职陪跑；企业 AI+IP 获客",
+    "audience": "留学生、应届生、企业业务和营销负责人",
+    "goal": "咨询"
+  },
+  "workflow": {
+    "version": 1,
+    "panels": [],
+    "tasks": [
+      {
+        "id": "091a6fb3-4d1c-47ce-8309-0f8b0f05ac01",
+        "priority": "P0",
+        "title": "验证真实购买前问题并建立基线",
+        "target": "https://www.a6no1.cn/services/career",
+        "evidence": "已核对公开服务页，尚未取得真实客户提问、AI 回答或站长平台索引数据。",
+        "action": "从脱敏咨询或搜索数据验证5条实际需求，再对已验证问题使用固定面板；保留失败和完整引用。",
+        "acceptance": "实际问题来源可追溯，至少一个真实入口完成全部基线尝试，结果有真实证据。",
+        "created": "2026-11-24",
+        "status": "待执行",
+        "execution": "",
+        "verification": "",
+        "verifiedBy": "",
+        "verifiedDate": ""
+      }
+    ],
+    "audits": [],
+    "competitors": []
+  }
+}

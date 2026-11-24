@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "name": "DEMO · 示例工作区（虚构数据）",
+  "demo": true,
+  "questions": [
+    {
+      "id": "q-demo",
+      "prompt": "如何批量给图片添加水印？",
+      "intent": "执行",
+      "stage": "假设",
+      "audience": "自媒体创作者",
+      "target": "https://example.com/tool",
+      "evidence": "教学样例，未验证真实需求"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f-demo",
+      "claim": "示例工具可以处理多张图片（虚构）",
+      "source": "https://example.com/tool",
+      "evidenceType": "自有",
+      "factStatus": "待核验",
+      "checked": "",
+      "notes": "仅演示字段"
+    }
+  ],
+  "observations": [
+    {
+      "id": "o-0-0",
+      "qid": "q-demo",
+      "engine": "示例引擎",
+      "surface": "Web",
+      "region": "示例地区",
+      "language": "zh-CN",
+      "date": "2026-11-17",
+      "batch": "基线",
+      "status": "成功",
+      "search": "是",
+      "mention": "是",
+      "recommend": "否",
+      "citation": "是",
+      "sources": "https://example.com/tool",
+      "evidence": "DEMO：人为合成，非真实模型回答"
+    },
+    {
+      "id": "o-0-1",
+      "qid": "q-demo",
+      "engine": "示例引擎",
+      "surface": "Web",
+      "region": "示例地区",
+      "language": "zh-CN",
+      "date": "2026-11-17",
+      "batch": "基线",
+      "status": "成功",
+      "search": "是",
+      "mention": "否",
+      "recommend": "否",
+      "citation": "否",
+      "sources": "",
+      "evidence": "DEMO：人为合成，非真实模型回答"
+    },
+    {
+      "id": "o-0-2",
+      "qid": "q-demo",
+      "engine": "示例引擎",
+      "surface": "Web",
+      "region": "示例地区",
+      "language": "zh-CN",
+      "date": "2026-11-17",
+      "batch": "基线",
+      "status": "成功",
+      "search": "是",
+      "mention": "否",
+      "recommend": "否",
+      "citation": "否",
+      "sources": "",
+      "evidence": "DEMO：人为合成，非真实模型回答"
+    },
+    {
+      "id": "o-1-0",
+      "qid": "q-demo",
+      "engine": "示例引擎",
+      "surface": "Web",
+      "region": "示例地区",
+      "language": "zh-CN",
+      "date": "2026-11-24",
+      "batch": "复测",
+      "status": "成功",
+      "search": "是",
+      "mention": "是",
+      "recommend": "是",
+      "citation": "是",
+      "sources": "https://example.com/tool",
+      "evidence": "DEMO：人为合成，非真实模型回答"
+    },
+    {
+      "id": "o-1-1",
+      "qid": "q-demo",
+      "engine": "示例引擎",
+      "surface": "Web",
+      "region": "示例地区",
+      "language": "zh-CN",
+      "date": "2026-11-24",
+      "batch": "复测",
+      "status": "成功",
+      "search": "是",
+      "mention": "是",
+      "recommend": "否",
+      "citation": "是",
+      "sources": "https://example.com/tool",
+      "evidence": "DEMO：人为合成，非真实模型回答"
+    },
+    {
+      "id": "o-1-2",
+      "qid": "q-demo",
+      "engine": "示例引擎",
+      "surface": "Web",
+      "region": "示例地区",
+      "language": "zh-CN",
+      "date": "2026-11-24",
+      "batch": "复测",
+      "status": "成功",
+      "search": "是",
+      "mention": "否",
+      "recommend": "否",
+      "citation": "否",
+      "sources": "",
+      "evidence": "DEMO：人为合成，非真实模型回答"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "e-demo",
+      "change": "示例：新增批量工具入口",
+      "before": "基线",
+      "after": "复测",
+      "date": "2026-11-18",
+      "notes": "虚构的教学对照，非因果证明"
+    }
+  ],
+  "events": [
+    {
+      "id": "v-demo",
+      "date": "2026-11-24",
+      "eventType": "付费",
+      "attribution": "未知",
+      "amount": "9.90",
+      "currency": "USD",
+      "source": "DEMO 不是订单",
+      "notes": "虚构金额"
+    }
+  ],
+  "profile": {
+    "brand": "DEMO 示例工具",
+    "scope": "https://example.com/tool",
+    "offer": "虚构工具",
+    "audience": "虚构创作者",
+    "goal": "工具使用"
+  }
+}
