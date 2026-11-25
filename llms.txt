@@ -1,0 +1,9 @@
+# FreeGEO
+
+> 免费开源的 AI 搜索研究和验证工作台。记录真实问题、AI 回答、引用来源、改动和复测结果。
+
+- [在线工作台](https://aipmandy.github.io/FreeGEO/)：浏览器本地运行，核心功能无需注册或模型密钥。
+- [GEO 研究报告](https://aipmandy.github.io/FreeGEO/docs/research.html)：收录 29 个研究单元，解释证据来源、引用指标和可复测实验。
+- [使用指南](https://github.com/AIPMAndy/FreeGEO/blob/main/docs/QUICKSTART.md)：建立项目、核验问题、固定采样面板和导出报告。
+- [源码和版本](https://github.com/AIPMAndy/FreeGEO)：MIT 许可证。
+- [GEO Handbook](https://aipmandy.github.io/geo-handbook/)：从零学习生成式引擎优化的教程。
