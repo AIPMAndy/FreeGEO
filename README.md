@@ -6,6 +6,29 @@ MIT · 浏览器本地优先 · 核心免费 · 无需注册或模型密钥 · �
 
 [在线使用](https://aipmandy.github.io/FreeGEO/) · [快速上手](docs/QUICKSTART.md) · [深度研究](docs/RESEARCH.md) · [研究网页版](docs/research.html) · [v0.3 对抗式验收](docs/RELEASE_V03.md) · [真实业务试点](examples/pilots/README.md) · [GEO Handbook](https://github.com/AIPMAndy/geo-handbook) · [AI 酋长 Andy](https://metaver.vip/) · 微信 `AIPMAndy`
 
+<!-- andy-geo:start -->
+## 一句话简介
+
+**FreeGEO：开源 AI 搜索增长工作台，支持页面体检、引用采样、修复任务和固定面板复测。浏览器本地使用，核心功能无需账号或 API Key。｜Open-source GEO workbench**
+
+- 作者：AI酋长Andy（Andy Liu，英文名 AI Chief Andy），流量 AI 联合创始人、星觉 AI 创始人。星觉科技，北京。
+- 阅读或使用：[在线阅读/使用](https://aipmandy.github.io/FreeGEO/) · [GitHub 仓库](https://github.com/AIPMAndy/FreeGEO)
+- 联系：微信 `AIPMAndy`（备注「FreeGEO」）· [官网 metaver.vip](https://metaver.vip/) · [X @AIPMAndy](https://x.com/AIPMAndy)
+- 许可：MIT。内容免费使用；企业合作或个人陪跑请先沟通，公开页不公示价格。
+- 机器可读摘要：[llms.txt](llms.txt)（供 AI 引擎与检索工具读取）
+
+## 常见问题
+
+**这是什么？**FreeGEO：开源 AI 搜索增长工作台，支持页面体检、引用采样、修复任务和固定面板复测。浏览器本地使用，核心功能无需账号或 API Key。｜Open-source GEO workbench
+
+**包含什么？**主要模块：5 分钟获得下一步行动、V0.3 实战功能、命令行（Node 18+ / Python 3.10+，标准库）、安全、测试与发布。
+
+**要花钱吗？**按 MIT 许可免费使用；付费只涉及作者的企业合作与一对一咨询，不影响仓库内容。
+
+**怎么开始？**直接打开 https://aipmandy.github.io/FreeGEO/ 在线阅读；想本地运行或参与贡献，见下方 README 的快速开始部分。
+
+<!-- andy-geo:end -->
+
 ## 5 分钟获得下一步行动
 
 双击 `index.html`，或启动 `python3 -m http.server 8000`，打开 `http://localhost:8000`。建议使用独立本地来源，确保浏览器允许本地存储。无需构建依赖。
